@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>A.bc1</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script type="module" src="./src/index.js"></script>
+    <script type="module" src="/js/snippets.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-sm bg-body-tertiary mb-3"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">
+          <img src="/images/AutenID_Solid.webp" alt="ANDOPEN" height="35" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/cardissuing.html"
+                >Card Issuing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/setup.html"
+                >Setup</a
+              >
+            </li>
+            <li class="nav-item">
+              <select class="form-select" id="floatingSelect">
+                <option selected>Language</option>
+                <option value="1">English</option>
+                <option value="2">Japanese</option>
+                <option value="3">Korean</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3">
+      <div class="bd-callout bd-callout-info">
+        <h2>How to issue a card</h2>
+        1. Do not remove the card by tagging it at the front of the device with
+        <code>CARD</code> written on it.<br />
+        2. Look at the front of your device to capture your face.<br />
+        3. Press the <code>Issuing</code> button when all preparations are
+        complete.<br />
+        4. Do not remove the card until you hear the issuance completion.<br />
+        <!-- <h2>카드 발급 방법</h2>
+        1. 발급할 카드를 단말기 앞부분 <code>"CARD"</code>라고 적혀있는 곳에
+        태그하고 떼지마세요.<br />
+        2. 얼굴을 촬영하기 위해 단말기 전면을 바라봅니다.<br />
+        3. 모든 준비가 완료되었다면 <code>Issuing</code> 버튼을 누릅니다.<br />
+        4. 발급완료 소리가 들릴때까지 카드를 떼지마세요. -->
+      </div>
+
+      <div id="liveAlertPlaceholder"></div>
+
+      <!-- <div id="liveAlertSpinner" class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div> -->
+    </div>
+
+    <form>
+      <div class="container mt-3">
+        <div
+          class="btn-group"
+          role="group"
+          aria-label="Button group with nested dropdown"
+        >
+          <div class="btn-group" role="group">
+            <button
+              type="button"
+              class="btn btn-primary dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Issuing
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#" id="liveAlertBtn">Success</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" id="liveAlertBtn2">Error1</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" id="liveAlertBtn3">Error2</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
